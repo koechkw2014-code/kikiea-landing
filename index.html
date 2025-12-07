@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kikiea - Trade Smarter, Live Richer</title>
+    
+    <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+    var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+    ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    
+    
+      ttq.load('D4QCJ5JC77U62PKDD9LG');
+      ttq.page();
+    }(window, document, 'ttq');
+    </script>
     <style>
         body, html {
             margin: 0;
@@ -65,7 +77,6 @@
             transition: background-color 0.3s;
             display: inline-block;
             margin-top: 15px;
-            /* Added target="_blank" so the Telegram link opens in a new tab */
         }
 
         .cta-button:hover {
@@ -118,7 +129,8 @@
         <h1>TRADE SMARTER, LIVE RICHER.</h1>
         <h2>Kikiea handles the work. You enjoy the view.</h2>
 
-        <a href="https://t.me/+daJQxL36OLs0MGI8" class="cta-button" target="_blank">
+        <a href="https://t.me/+daJQxL36OLs0MGI8" class="cta-button" target="_blank"
+           onclick="ttq.track('ClickToJoinTelegram');">
             JOIN OUR FREE TELEGRAM COMMUNITY
         </a>
 
