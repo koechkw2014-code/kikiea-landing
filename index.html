@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kikiea - Trade Smarter, Live Richer</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .hero-section {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #FFFFFF;
+        }
+
+        #video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -2;
+        }
+
+        .overlay-content {
+            /* Semi-transparent dark overlay for readability */
+            background: rgba(0, 0, 0, 0.4); 
+            padding: 40px;
+            z-index: 1;
+            border-radius: 10px;
+        }
+
+        .overlay-content h1 {
+            font-size: 3em;
+            margin-bottom: 0.2em;
+            font-weight: 700;
+        }
+
+        .overlay-content h2 {
+            font-size: 1.5em;
+            margin-bottom: 2em;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            text-decoration: none;
+            background-color: #000000; 
+            color: #FFD700; /* Light Gold Text */
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            display: inline-block;
+            margin-top: 15px;
+            /* Added target="_blank" so the Telegram link opens in a new tab */
+        }
+
+        .cta-button:hover {
+            background-color: #333333;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 10px 0;
+            font-size: 0.8em;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 2;
+        }
+
+        .footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+
+        /* Styles for UNMUTE BUTTON */
+        #unmuteButton {
+            background: rgba(255, 255, 255, 0.2);
+            color: #FFD700;
+            border: 2px solid #FFD700;
+            padding: 10px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s;
+            margin-top: 25px;
+            font-weight: bold;
+        }
+        
+        #unmuteButton:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero-section">
+    <video autoplay muted loop id="video-background">
+        <source src="kikiea.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <div class="overlay-content">
+        <h1>TRADE SMARTER, LIVE RICHER.</h1>
+        <h2>Kikiea handles the work. You enjoy the view.</h2>
+
+        <a href="https://t.me/+daJQxL36OLs0MGI8" class="cta-button" target="_blank">
+            JOIN OUR FREE TELEGRAM COMMUNITY
+        </a>
+
+        <button id="unmuteButton">🔊 Click to Unmute Video</button>
+    </div>
+
+    <div class="footer">
+        <p>Trading carries risk. Please consult our <a href="#">Disclaimer</a> and <a href="#">Privacy Policy</a>.</p>
+    </div>
+</div>
+
+<script>
+    const video = document.getElementById('video-background');
+    const unmuteBtn = document.getElementById('unmuteButton');
+
+    if (video && unmuteBtn) {
+        unmuteBtn.addEventListener('click', () => {
+            video.muted = false; 
+            video.play(); 
+            unmuteBtn.style.display = 'none'; 
+        });
+    }
+</script>
+
+</body>
+</html>
